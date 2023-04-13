@@ -17,6 +17,6 @@ phases:
   post_build:
     commands:
       - echo "Update Kube Config"      
-      - aws eks update-kubeconfig --name demo-eks-cluster
+      - aws eks update-kubeconfig --name eks-gitops-cluster
       - echo "Apply changes to kube manifests"
       - kubectl apply -f busybox-deployment.yaml
